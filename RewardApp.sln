@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C355C72F-88C7-445A-8384-0E8BF9C2E154}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{E05498AD-760D-4235-B1E0-E2E9BD80A7A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{6A34D144-3BC8-4494-8429-85293E1B9A85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BB81C67C-F850-419D-A3D9-AE3D01C28641}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{C06D568E-3323-4F97-B139-CA77BDFBCEB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3E92A563-FF49-4E6B-A990-0D0EBCB29EB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RewardApp.Api.Domain", "src\Api\Core\RewardApp.Api.Domain\RewardApp.Api.Domain.csproj", "{A1F61179-B7CE-4307-B383-BC7769AF6C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RewarApp.Api.Application", "RewarApp.Api.Application\RewarApp.Api.Application.csproj", "{77345FE5-9650-49A3-A50A-16512EA83F6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1F61179-B7CE-4307-B383-BC7769AF6C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F61179-B7CE-4307-B383-BC7769AF6C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F61179-B7CE-4307-B383-BC7769AF6C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F61179-B7CE-4307-B383-BC7769AF6C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77345FE5-9650-49A3-A50A-16512EA83F6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77345FE5-9650-49A3-A50A-16512EA83F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77345FE5-9650-49A3-A50A-16512EA83F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77345FE5-9650-49A3-A50A-16512EA83F6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E05498AD-760D-4235-B1E0-E2E9BD80A7A1} = {C355C72F-88C7-445A-8384-0E8BF9C2E154}
+		{6A34D144-3BC8-4494-8429-85293E1B9A85} = {C355C72F-88C7-445A-8384-0E8BF9C2E154}
+		{BB81C67C-F850-419D-A3D9-AE3D01C28641} = {E05498AD-760D-4235-B1E0-E2E9BD80A7A1}
+		{C06D568E-3323-4F97-B139-CA77BDFBCEB9} = {E05498AD-760D-4235-B1E0-E2E9BD80A7A1}
+		{3E92A563-FF49-4E6B-A990-0D0EBCB29EB2} = {E05498AD-760D-4235-B1E0-E2E9BD80A7A1}
+		{A1F61179-B7CE-4307-B383-BC7769AF6C8B} = {BB81C67C-F850-419D-A3D9-AE3D01C28641}
+		{77345FE5-9650-49A3-A50A-16512EA83F6C} = {BB81C67C-F850-419D-A3D9-AE3D01C28641}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DF62B09-B58C-4ABB-B3F2-0222485F26AE}
+	EndGlobalSection
+EndGlobal
