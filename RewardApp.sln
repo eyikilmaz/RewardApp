@@ -15,13 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{C06D56
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3E92A563-FF49-4E6B-A990-0D0EBCB29EB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RewardApp.Api.Domain", "src\Api\Core\RewardApp.Api.Domain\RewardApp.Api.Domain.csproj", "{A1F61179-B7CE-4307-B383-BC7769AF6C8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RewardApp.Api.Domain", "src\Api\Core\RewardApp.Api.Domain\RewardApp.Api.Domain.csproj", "{A1F61179-B7CE-4307-B383-BC7769AF6C8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RewardApp.Api.Application", "src\Api\Core\RewardApp.Api.Application\RewardApp.Api.Application.csproj", "{F0192F21-2D31-4D68-9083-499BDEE5EB71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RewardApp.Api.Application", "src\Api\Core\RewardApp.Api.Application\RewardApp.Api.Application.csproj", "{F0192F21-2D31-4D68-9083-499BDEE5EB71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RewardApp.Infrastructure.Persistence", "src\Api\Infrastructure\RewardApp.Infrastructure.Persistence\RewardApp.Infrastructure.Persistence.csproj", "{3E41F946-BD3B-46E7-9C5D-D0D2835F613E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RewardApp.Infrastructure.Persistence", "src\Api\Infrastructure\RewardApp.Infrastructure.Persistence\RewardApp.Infrastructure.Persistence.csproj", "{3E41F946-BD3B-46E7-9C5D-D0D2835F613E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RewardApp.Common", "src\Common\RewardApp.Common\RewardApp.Common.csproj", "{A0D2FB7F-5246-4F35-9C01-F42230B6A611}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RewardApp.Common", "src\Common\RewardApp.Common\RewardApp.Common.csproj", "{A0D2FB7F-5246-4F35-9C01-F42230B6A611}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RewardApp.Api.WebApi", "src\Api\WebApi\RewardApp.Api.WebApi\RewardApp.Api.WebApi.csproj", "{4E86CAF0-8D91-488B-AED7-41DA77A9C906}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{A0D2FB7F-5246-4F35-9C01-F42230B6A611}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0D2FB7F-5246-4F35-9C01-F42230B6A611}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0D2FB7F-5246-4F35-9C01-F42230B6A611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E86CAF0-8D91-488B-AED7-41DA77A9C906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E86CAF0-8D91-488B-AED7-41DA77A9C906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E86CAF0-8D91-488B-AED7-41DA77A9C906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E86CAF0-8D91-488B-AED7-41DA77A9C906}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{F0192F21-2D31-4D68-9083-499BDEE5EB71} = {BB81C67C-F850-419D-A3D9-AE3D01C28641}
 		{3E41F946-BD3B-46E7-9C5D-D0D2835F613E} = {3E92A563-FF49-4E6B-A990-0D0EBCB29EB2}
 		{A0D2FB7F-5246-4F35-9C01-F42230B6A611} = {6A34D144-3BC8-4494-8429-85293E1B9A85}
+		{4E86CAF0-8D91-488B-AED7-41DA77A9C906} = {C06D568E-3323-4F97-B139-CA77BDFBCEB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3DF62B09-B58C-4ABB-B3F2-0222485F26AE}
