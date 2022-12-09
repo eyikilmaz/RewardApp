@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RewarApp.Api.Application.Interfaces.Repositories;
+using RewardApp.Api.Application.Interfaces.Repositories;
 using RewardApp.Infrastructure.Persistence.Context;
 using RewardApp.Infrastructure.Persistence.Repositories;
 using System;
@@ -26,6 +27,7 @@ public static class Registration
         });
 
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IEmailConfirmationRepository, EmailConfirmationRepository>();
 
         return services;
     }

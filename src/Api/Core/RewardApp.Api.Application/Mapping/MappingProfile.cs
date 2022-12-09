@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using RewardApp.Api.Domain.Models;
+using RewardApp.Common.Models.Queries;
 using RewardApp.Common.Models.RequestModels;
 using System;
 using System.Collections.Generic;
@@ -16,5 +17,11 @@ public class MappingProfile : Profile
         CreateMap<CreateUserCommand, User>();
         
         CreateMap<UpdateUserCommand, User>();
+
+        CreateMap<User, LoginUserViewModel>()
+           .ReverseMap();
+
+        CreateMap<UserDetailViewModel, User>()
+            .ReverseMap();
     }
 }

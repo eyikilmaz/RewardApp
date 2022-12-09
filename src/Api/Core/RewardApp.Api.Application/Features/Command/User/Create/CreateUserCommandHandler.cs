@@ -1,7 +1,10 @@
 ﻿using AutoMapper;
 using MediatR;
 using RewarApp.Api.Application.Interfaces.Repositories;
+using RewardApp.Common;
+using RewardApp.Common.Events.User;
 using RewardApp.Common.Exceptions;
+using RewardApp.Common.Infrastructure;
 using RewardApp.Common.Models.RequestModels;
 using System;
 using System.Collections.Generic;
@@ -35,7 +38,16 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
 
         if (rows > 0)
         {
-            // TODO rabbitmq sendMail
+            var @event = new UserEmailChangedEvent()
+            {
+                OldEmailAddress = null,
+                NewEmailAddress = dbUser.EmailAddress
+            };
+
+            QueueFactory.SendMessageToExchange(exchangeName: AppConstant.UserExchangeName,
+                                               exchangeType: AppConstant.DefaultExchangeType,
+                                               queueName: AppConstant.UserEmailChangedQueueName,
+                                               obj: @event);
         }
 
         return dbUser.Id;
