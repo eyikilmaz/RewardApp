@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RewardApp.Infrastructure.Persistence.Context;
 
@@ -11,9 +12,11 @@ using RewardApp.Infrastructure.Persistence.Context;
 namespace RewardApp.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(RewardAppContext))]
-    partial class RewardAppContextModelSnapshot : ModelSnapshot
+    [Migration("20221211202043_updateuser")]
+    partial class updateuser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
