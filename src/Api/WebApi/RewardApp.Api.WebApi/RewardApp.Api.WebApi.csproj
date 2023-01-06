@@ -14,6 +14,7 @@
 
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\..\ExceptionHandlingExtension\RewardApp.ExceptionHandlingExtension\RewardApp.ExceptionHandlingExtension.csproj" />
 		<ProjectReference Include="..\..\Core\RewardApp.Api.Application\RewardApp.Api.Application.csproj" />
 		<ProjectReference Include="..\..\Infrastructure\RewardApp.Infrastructure.Persistence\RewardApp.Infrastructure.Persistence.csproj" />
 	</ItemGroup>

@@ -5,7 +5,7 @@ using RewardApp.Api.Application.Features.Queries.User.GetUserDetail;
 using RewardApp.Common.Models.RequestModels;
 
 namespace RewardApp.Api.WebApi.Controllers;
-[Route("api/[Controller]")]
+[Route("api/[controller]")]
 [ApiController]
 
 public class UserController : BaseController
@@ -26,7 +26,7 @@ public class UserController : BaseController
     }
 
     [HttpGet]
-    [Route("UserName/{userName}")]
+    [Route("userName/{userName}")]
     public async Task<IActionResult> GetByUserName(string userName)
     {
         var user = await mediator.Send(new GetUserDetailQuery(Guid.Empty, userName));
@@ -35,7 +35,7 @@ public class UserController : BaseController
     }
 
     [HttpPost]
-    [Route("Login")]
+    [Route("login")]
     public async Task<IActionResult> Login([FromBody] LoginUserCommand command)
     {
         var res = await mediator.Send(command);
@@ -52,7 +52,7 @@ public class UserController : BaseController
     }
 
     [HttpPost]
-    [Route("Update")]
+    [Route("update")]
     public async Task<IActionResult> UpdateUser([FromBody] UpdateUserCommand command)
     {
         var res = await mediator.Send(command);
@@ -61,7 +61,7 @@ public class UserController : BaseController
     }
 
     [HttpPost]
-    [Route("Confirm")]
+    [Route("confirm")]
     public async Task<IActionResult> ConfirmEmail(Guid id)
     {
         var guid = await mediator.Send(new ConfirmEmailCommand() { ConfirmationId = id });
@@ -70,7 +70,7 @@ public class UserController : BaseController
     }
 
     [HttpPost]
-    [Route("ChangePassword")]
+    [Route("change-password")]
     public async Task<IActionResult> ChangePassword([FromBody] ChangeUserPasswordCommand command)
     {
         if (!command.UserId.HasValue)

@@ -23,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RewardApp.Infrastructure.Pe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RewardApp.Common", "src\Common\RewardApp.Common\RewardApp.Common.csproj", "{A0D2FB7F-5246-4F35-9C01-F42230B6A611}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RewardApp.Api.WebApi", "src\Api\WebApi\RewardApp.Api.WebApi\RewardApp.Api.WebApi.csproj", "{4E86CAF0-8D91-488B-AED7-41DA77A9C906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RewardApp.Api.WebApi", "src\Api\WebApi\RewardApp.Api.WebApi\RewardApp.Api.WebApi.csproj", "{4E86CAF0-8D91-488B-AED7-41DA77A9C906}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExceptionHandlingExtension", "ExceptionHandlingExtension", "{1AB07F45-72AB-44A3-8BD3-5CEF98FDC843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RewardApp.ExceptionHandlingExtension", "src\ExceptionHandlingExtension\RewardApp.ExceptionHandlingExtension\RewardApp.ExceptionHandlingExtension.csproj", "{AD303E0A-5314-4518-8BB7-2E5577A7B7A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,10 @@ Global
 		{4E86CAF0-8D91-488B-AED7-41DA77A9C906}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E86CAF0-8D91-488B-AED7-41DA77A9C906}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E86CAF0-8D91-488B-AED7-41DA77A9C906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD303E0A-5314-4518-8BB7-2E5577A7B7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD303E0A-5314-4518-8BB7-2E5577A7B7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD303E0A-5314-4518-8BB7-2E5577A7B7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD303E0A-5314-4518-8BB7-2E5577A7B7A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +74,8 @@ Global
 		{3E41F946-BD3B-46E7-9C5D-D0D2835F613E} = {3E92A563-FF49-4E6B-A990-0D0EBCB29EB2}
 		{A0D2FB7F-5246-4F35-9C01-F42230B6A611} = {6A34D144-3BC8-4494-8429-85293E1B9A85}
 		{4E86CAF0-8D91-488B-AED7-41DA77A9C906} = {C06D568E-3323-4F97-B139-CA77BDFBCEB9}
+		{1AB07F45-72AB-44A3-8BD3-5CEF98FDC843} = {C355C72F-88C7-445A-8384-0E8BF9C2E154}
+		{AD303E0A-5314-4518-8BB7-2E5577A7B7A5} = {1AB07F45-72AB-44A3-8BD3-5CEF98FDC843}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3DF62B09-B58C-4ABB-B3F2-0222485F26AE}
