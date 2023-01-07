@@ -5,7 +5,7 @@ using RewardApp.Api.Application.Features.Queries.User.GetUserDetail;
 using RewardApp.Common.Models.RequestModels;
 
 namespace RewardApp.Api.WebApi.Controllers;
-[Route("api/[controller]")]
+[Route("api/users")]
 [ApiController]
 
 public class UserController : BaseController
@@ -26,7 +26,7 @@ public class UserController : BaseController
     }
 
     [HttpGet]
-    [Route("userName/{userName}")]
+    [Route("user-name/{userName}")]
     public async Task<IActionResult> GetByUserName(string userName)
     {
         var user = await mediator.Send(new GetUserDetailQuery(Guid.Empty, userName));

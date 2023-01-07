@@ -17,4 +17,7 @@ public class User : BaseEntity
     public string PhoneNumber { get; set; }
     public string Address { get; set; }
     public bool EmailConfirmed { get; set; }
+
+    public virtual ICollection<Assignment> Assignments { get; set; }
+    public virtual ICollection<Reward> Rewards { get; set; }
 }

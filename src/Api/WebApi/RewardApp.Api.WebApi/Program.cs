@@ -15,12 +15,13 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// man
 builder.Services.AddApplicationRegistration();
 builder.Services.AddInfrastructureRegistration(builder.Configuration);
 
-
 var app = builder.Build();
 
+// man
 app.ConfigureExceptionHandling(opt =>
 {
     var logger = app.Services.GetService<ILogger>();

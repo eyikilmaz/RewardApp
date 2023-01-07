@@ -25,6 +25,10 @@ public class RewardAppContext : DbContext
 
     DbSet<User> Users { get; set; }
     DbSet<EmailConfirmation> EmailConfirmations { get; set; }
+    DbSet<Assignment> Assignments { get; set; }
+    DbSet<Reward> Rewards { get; set; }
+    DbSet<RewardUser> RewardUsers { get; set; }
+    DbSet<Winner> Winners { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
