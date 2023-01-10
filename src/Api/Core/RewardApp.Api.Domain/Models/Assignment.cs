@@ -9,8 +9,10 @@ namespace RewardApp.Api.Domain.Models;
 public class Assignment : BaseEntity
 {
     public DateTime CreateDate { get; set; }
-    public Reward RewardId { get; set; }
-    public User UserId { get; set; }
+    public Guid RewardId { get; set; }
+    public Guid UserId { get; set; }
+    public virtual User User { get; set; }
+    public virtual Reward Reward { get; set; }
     public string AssignmentName { get; set; }
     public sbyte State { get; set; }
 }

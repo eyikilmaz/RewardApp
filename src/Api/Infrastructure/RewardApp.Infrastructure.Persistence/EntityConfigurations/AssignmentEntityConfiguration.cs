@@ -18,8 +18,10 @@ public class AssignmentEntityConfiguration : BaseEntityConfiguration<Assignment>
 
         builder.ToTable("assignment", RewardAppContext.DEFAULT_SCHEMA);
 
-        builder.HasOne(i => i.UserId)
+        builder.HasOne(i => i.User)
                .WithMany(i => i.Assignments)
-               .HasForeignKey(i => i.UserId);
+               .HasForeignKey(i => i.UserId)
+               .OnDelete(DeleteBehavior.Restrict);
+
     }
 }

@@ -20,4 +20,5 @@ public class User : BaseEntity
 
     public virtual ICollection<Assignment> Assignments { get; set; }
     public virtual ICollection<Reward> Rewards { get; set; }
+    public virtual ICollection<RewardUser> RewardUsers { get; set; }
 }

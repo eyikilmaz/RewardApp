@@ -10,7 +10,8 @@ public class Reward : BaseEntity
 {
     public Guid RewardKey { get; set; }
     public DateTime CreateDate { get; set; }
-    public User CreatedById { get; set; }
+    public Guid CreatedById { get; set; }
+    public virtual User CreatedBy { get; set; }
     public string RewardName { get; set; }
     public bool IsDefault { get; set; }
     public sbyte Repeat { get; set; }

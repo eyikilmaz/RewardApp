@@ -18,7 +18,7 @@ public class RewardEntityConfiguration : BaseEntityConfiguration<Reward>
 
         builder.ToTable("reward", RewardAppContext.DEFAULT_SCHEMA);
 
-        builder.HasOne(i => i.CreatedById)
+        builder.HasOne(i => i.CreatedBy)
              .WithMany(i => i.Rewards)
              .HasForeignKey(i => i.CreatedById);
     }

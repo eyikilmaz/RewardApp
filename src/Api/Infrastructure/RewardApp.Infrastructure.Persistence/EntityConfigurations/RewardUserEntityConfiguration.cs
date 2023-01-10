@@ -18,8 +18,13 @@ public class RewardUserEntityConfiguration : BaseEntityConfiguration<RewardUser>
 
         builder.ToTable("rewarduser", RewardAppContext.DEFAULT_SCHEMA);
 
-        builder.HasOne(i => i.RewardId)
+        builder.HasOne(i => i.Reward)
             .WithMany(i => i.RewardUsers)
             .HasForeignKey(i => i.RewardId);
+
+        builder.HasOne(i => i.User)
+          .WithMany(i => i.RewardUsers)
+          .HasForeignKey(i => i.UserId)
+          .OnDelete(DeleteBehavior.Restrict);
     }
 }
