@@ -82,3 +82,80 @@ System.ArgumentException: Keyword not supported: 'host'.
 2023-01-17 22:18:14.585 +03:00 [INF] Hosting environment: Development
 2023-01-17 22:18:14.585 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
 2023-01-17 22:18:18.982 +03:00 [INF] Application is shutting down...
+2023-01-17 22:30:24.953 +03:00 [INF] Now listening on: http://localhost:7131
+2023-01-17 22:30:24.995 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-17 22:30:24.996 +03:00 [INF] Hosting environment: Development
+2023-01-17 22:30:24.996 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-01-17 22:31:29.912 +03:00 [INF] Application is shutting down...
+2023-01-17 22:32:36.423 +03:00 [INF] Now listening on: http://localhost:7131
+2023-01-17 22:32:36.560 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-17 22:32:36.563 +03:00 [INF] Hosting environment: Development
+2023-01-17 22:32:36.564 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-01-17 22:32:52.031 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7131/swagger - -
+2023-01-17 22:32:53.489 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7131/swagger - - - 301 0 - 1466.8859ms
+2023-01-17 22:32:53.502 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7131/swagger/index.html - -
+2023-01-17 22:32:57.824 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7131/swagger/index.html - - - 200 - text/html;charset=utf-8 4322.0085ms
+2023-01-17 22:32:57.982 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7131/swagger/swagger-ui-bundle.js - -
+2023-01-17 22:32:57.987 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7131/swagger/swagger-ui.css - -
+2023-01-17 22:32:57.987 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7131/swagger/swagger-ui-standalone-preset.js - -
+2023-01-17 22:32:57.991 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7131/_framework/aspnetcore-browser-refresh.js - -
+2023-01-17 22:32:57.995 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7131/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 4.3388ms
+2023-01-17 22:32:58.101 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-01-17 22:32:58.102 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-17 22:32:58.102 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7131/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 115.0056ms
+2023-01-17 22:32:58.102 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7131/swagger/swagger-ui.css - - - 200 143943 text/css 115.1913ms
+2023-01-17 22:32:58.233 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-17 22:32:58.234 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7131/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 251.5236ms
+2023-01-17 22:32:58.880 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7131/swagger/favicon-16x16.png - -
+2023-01-17 22:32:58.881 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-01-17 22:32:58.881 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7131/swagger/favicon-16x16.png - - - 200 665 image/png 1.0689ms
+2023-01-17 22:32:59.272 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7131/swagger/v1/swagger.json - -
+2023-01-17 22:33:00.168 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7131/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 895.2677ms
+2023-01-17 22:33:16.279 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7131/api/users/a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11 - -
+2023-01-17 22:33:16.305 +03:00 [WRN] Failed to determine the https port for redirect.
+2023-01-17 22:33:16.319 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.UserController.Get (RewardApp.Api.WebApi)'
+2023-01-17 22:33:16.496 +03:00 [INF] Route matched with {action = "Get", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.Guid) on controller RewardApp.Api.WebApi.Controllers.UserController (RewardApp.Api.WebApi).
+2023-01-17 22:33:28.106 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.UserController.Get (RewardApp.Api.WebApi) in 11599.8229ms
+2023-01-17 22:33:28.184 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.UserController.Get (RewardApp.Api.WebApi)'
+2023-01-17 22:33:28.193 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Keyword not supported: 'port'.
+   at Microsoft.Data.SqlClient.SqlConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.SqlClient.SqlConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.SqlClient.SqlConnectionStringBuilder..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.<>c.<get_IsMultipleActiveResultSetsEnabled>b__7_0(String cs)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.get_IsMultipleActiveResultSetsEnabled()
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Internal.SqlServerCompiledQueryCacheKeyGenerator.GenerateCacheKey(Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Internal.EntityFinder`1.FindAsync(Object[] keyValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.FindAsync(Object[] keyValues)
+   at RewardApp.Infrastructure.Persistence.Repositories.GenericRepository`1.GetByIdAsync(Guid id, Boolean noTracking, Expression`1[] includes) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\Infrastructure\RewardApp.Infrastructure.Persistence\Repositories\GenericRepository.cs:line 208
+   at RewardApp.Api.Application.Features.Queries.User.GetUserDetail.GetUserDetailQueryHandler.Handle(GetUserDetailQuery request, CancellationToken cancellationToken) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\Core\RewardApp.Api.Application\Features\Queries\User\GetUserDetail\GetUserDetailQueryHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at RewardApp.Api.WebApi.Controllers.UserController.Get(Guid id) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi\Controllers\UserController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-01-17 22:33:29.402 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7131/api/users/a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11 - - - 500 - application/json 13123.3939ms

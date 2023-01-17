@@ -20,7 +20,7 @@ public static class Registration
         services.AddDbContext<RewardAppContext>(conf =>
         {
             var connStr = configuration["RewardAppDbConnectionString"].ToString();
-            conf.UseSqlServer(connStr, opt =>
+            conf.UseNpgsql(connStr, opt =>
             {
                 opt.EnableRetryOnFailure();
             });
