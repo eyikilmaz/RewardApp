@@ -34,8 +34,14 @@ public class RewardAppContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
+            //var connStr = "Data Source=EMRE;Initial Catalog=rewardAppDB;Persist Security Info=True; Encrypt=False; User ID=sa; Password=1234";
+            //optionsBuilder.UseSqlServer(connStr, opt =>
+            //{
+            //    opt.EnableRetryOnFailure();
+            //});
+
             var connStr = "Data Source=EMRE;Initial Catalog=rewardAppDB;Persist Security Info=True; Encrypt=False; User ID=sa; Password=1234";
-            optionsBuilder.UseSqlServer(connStr, opt =>
+            optionsBuilder.UseNpgsql(connStr, opt =>
             {
                 opt.EnableRetryOnFailure();
             });
