@@ -40,7 +40,7 @@ public class RewardAppContext : DbContext
             //    opt.EnableRetryOnFailure();
             //});
 
-            var connStr = "Data Source=EMRE;Initial Catalog=rewardAppDB;Persist Security Info=True; Encrypt=False; User ID=sa; Password=1234";
+            var connStr = "Host=postgres;Server=31.187.74.32;Port=7132;Database=rewarddb;Username=admin;Password=Aa.12345@";
             optionsBuilder.UseNpgsql(connStr, opt =>
             {
                 opt.EnableRetryOnFailure();
