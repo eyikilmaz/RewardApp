@@ -24,3 +24,17 @@
 2023-01-20 17:44:18.609 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1059.6949ms
 2023-01-20 17:44:18.908 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
 2023-01-20 17:44:19.389 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 480.9062ms
+2023-01-20 17:59:32.030 +03:00 [INF] Now listening on: https://localhost:7130
+2023-01-20 17:59:32.096 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-20 17:59:32.098 +03:00 [INF] Hosting environment: Development
+2023-01-20 17:59:32.098 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-01-20 19:12:50.296 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-01-20 19:12:50.493 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 404 0 - 201.5014ms
+2023-01-20 19:12:50.647 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/favicon.ico - -
+2023-01-20 19:12:50.653 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/favicon.ico - - - 404 0 - 5.8847ms
+2023-01-20 19:13:12.441 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-01-20 19:13:12.444 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 404 0 - 3.9992ms
+2023-01-20 19:13:23.248 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-01-20 19:13:23.250 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 404 0 - 1.8001ms
+2023-01-20 19:13:27.704 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-01-20 19:13:27.705 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 404 0 - 1.7262ms
