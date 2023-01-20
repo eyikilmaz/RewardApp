@@ -21,7 +21,7 @@ builder.Services.AddSwaggerGen(opt =>
 {
     opt.AddServer(new OpenApiServer()
     {
-        Url = "https://31.187.74.32"
+        Url = "https://31.187.74.32:7130/swagger"
     });
 });
 
