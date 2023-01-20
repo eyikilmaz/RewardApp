@@ -17,13 +17,7 @@ builder.Services.AddControllers()
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(opt =>
-{
-    opt.AddServer(new OpenApiServer()
-    {
-        Url = "https://31.187.74.32:7130/swagger"
-    });
-});
+builder.Services.AddSwaggerGen();
 
 // man
 builder.Services.AddApplicationRegistration();
