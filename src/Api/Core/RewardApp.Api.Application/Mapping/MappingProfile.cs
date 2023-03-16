@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using RewardApp.Api.Domain.Models;
-using RewardApp.Common.Models.Queries;
+using RewardApp.Common.Models.Queries.User;
 using RewardApp.Common.Models.RequestModels;
 using System;
 using System.Collections.Generic;
@@ -23,5 +23,7 @@ public class MappingProfile : Profile
 
         CreateMap<UserDetailViewModel, User>()
             .ReverseMap();
+
+        CreateMap<CreateAssignmentCommand, Assignment>();
     }
 }

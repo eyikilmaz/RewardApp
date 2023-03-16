@@ -44,6 +44,7 @@ public class UserController : BaseController
     }
 
     [HttpPost]
+    [Route("create")]
     public async Task<IActionResult> Create([FromBody] CreateUserCommand command)
     {
         var res = await mediator.Send(command);

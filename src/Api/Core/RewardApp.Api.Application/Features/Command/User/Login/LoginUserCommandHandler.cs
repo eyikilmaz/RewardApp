@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using RewarApp.Api.Application.Interfaces.Repositories;
 using RewardApp.Common.Exceptions;
 using RewardApp.Common.Infrastructure;
-using RewardApp.Common.Models.Queries;
+using RewardApp.Common.Models.Queries.User;
 using RewardApp.Common.Models.RequestModels;
 using System;
 using System.Collections.Generic;

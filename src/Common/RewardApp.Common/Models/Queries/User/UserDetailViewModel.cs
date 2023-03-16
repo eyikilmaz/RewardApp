@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RewardApp.Common.Models.Queries;
+namespace RewardApp.Common.Models.Queries.User;
 
 public class UserDetailViewModel
 {

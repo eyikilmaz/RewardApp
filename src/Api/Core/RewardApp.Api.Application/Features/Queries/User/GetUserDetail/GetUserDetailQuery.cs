@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using RewardApp.Common.Models.Queries;
+using RewardApp.Common.Models.Queries.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
