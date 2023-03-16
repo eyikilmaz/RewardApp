@@ -10,6 +10,7 @@ namespace RewardApp.Api.Application.Features.Queries.User.GetUserDetail;
 
 public class GetUserDetailQuery : IRequest<UserDetailViewModel>
 {
+    // branch emre değişikliği
     public Guid UserId { get; set; }
 
     public string UserName { get; set; }
