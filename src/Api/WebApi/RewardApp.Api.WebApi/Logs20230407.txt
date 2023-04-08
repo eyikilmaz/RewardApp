@@ -1,0 +1,1298 @@
+2023-04-07 09:58:45.983 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 09:58:46.083 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 09:58:46.085 +03:00 [INF] Hosting environment: Development
+2023-04-07 09:58:46.085 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 09:59:09.252 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 09:59:09.819 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 589.9365ms
+2023-04-07 09:59:10.435 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 09:59:11.278 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 843.1233ms
+2023-04-07 09:59:11.377 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - -
+2023-04-07 09:59:11.378 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 09:59:11.383 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 09:59:11.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 09:59:11.417 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 09:59:11.469 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 51.5917ms
+2023-04-07 09:59:11.498 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 09:59:11.499 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - - - 200 143943 text/css 121.4044ms
+2023-04-07 09:59:11.521 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 09:59:11.522 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 139.1334ms
+2023-04-07 09:59:11.649 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 09:59:11.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 271.8203ms
+2023-04-07 09:59:11.879 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 490.3043ms
+2023-04-07 09:59:12.195 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - -
+2023-04-07 09:59:12.197 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 09:59:12.198 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - - - 200 665 image/png 7.7096ms
+2023-04-07 09:59:12.503 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 09:59:13.065 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 565.7712ms
+2023-04-07 10:18:04.718 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/users/create application/json 194
+2023-04-07 10:18:04.738 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.UserController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:18:04.821 +03:00 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.CreateUserCommand) on controller RewardApp.Api.WebApi.Controllers.UserController (RewardApp.Api.WebApi).
+2023-04-07 10:18:11.171 +03:00 [INF] Executed DbCommand (135ms) [Parameters=[@__request_EmailAddress_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Address", u."CreateDate", u."EmailAddress", u."EmailConfirmed", u."FirstName", u."LastName", u."Password", u."PhoneNumber", u."UserName"
+FROM dbo."user" AS u
+WHERE u."EmailAddress" = @__request_EmailAddress_0
+LIMIT 2
+2023-04-07 10:18:11.922 +03:00 [INF] Executed DbCommand (202ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?', @p4='?' (DbType = Boolean), @p5='?', @p6='?', @p7='?', @p8='?', @p9='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO dbo."user" ("Id", "Address", "CreateDate", "EmailAddress", "EmailConfirmed", "FirstName", "LastName", "Password", "PhoneNumber", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2023-04-07 10:18:12.454 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-04-07 10:18:12.488 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.UserController.Create (RewardApp.Api.WebApi) in 7660.3394ms
+2023-04-07 10:18:12.490 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.UserController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:18:12.513 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/users/create application/json 194 - 200 - application/json;+charset=utf-8 7794.9672ms
+2023-04-07 10:30:41.428 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 10:30:41.576 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 10:30:41.578 +03:00 [INF] Hosting environment: Development
+2023-04-07 10:30:41.578 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 10:30:52.267 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 10:30:52.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 232.5273ms
+2023-04-07 10:30:52.551 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 10:30:53.083 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 531.5887ms
+2023-04-07 10:30:53.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - -
+2023-04-07 10:30:53.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 10:30:53.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 10:30:53.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 10:30:53.169 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 10:30:53.214 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 44.7005ms
+2023-04-07 10:30:53.355 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 10:30:53.356 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 10:30:53.356 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - - - 200 143943 text/css 201.3998ms
+2023-04-07 10:30:53.364 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 200.6107ms
+2023-04-07 10:30:53.406 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 10:30:53.407 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 251.9240ms
+2023-04-07 10:30:53.537 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 381.1725ms
+2023-04-07 10:30:53.873 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - -
+2023-04-07 10:30:53.874 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 10:30:53.874 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - - - 200 665 image/png 1.4032ms
+2023-04-07 10:30:54.100 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 10:30:54.658 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 558.2134ms
+2023-04-07 10:32:51.674 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:32:51.714 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:32:51.867 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:32:52.003 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 127.3999ms
+2023-04-07 10:32:52.007 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:32:52.014 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:32:52.143 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 469.6638ms
+2023-04-07 10:34:59.470 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 10:34:59.613 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 10:34:59.616 +03:00 [INF] Hosting environment: Development
+2023-04-07 10:34:59.616 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 10:35:17.244 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 10:35:17.449 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 206.2092ms
+2023-04-07 10:35:17.489 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 10:35:18.027 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 537.9139ms
+2023-04-07 10:35:18.150 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - -
+2023-04-07 10:35:18.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 10:35:18.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 10:35:18.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 10:35:18.247 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 10:35:18.278 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 29.7208ms
+2023-04-07 10:35:18.336 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 10:35:18.336 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 10:35:18.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 152.1550ms
+2023-04-07 10:35:18.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - - - 200 143943 text/css 186.3929ms
+2023-04-07 10:35:18.464 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 10:35:18.465 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 280.0698ms
+2023-04-07 10:35:18.623 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 437.9378ms
+2023-04-07 10:35:18.896 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - -
+2023-04-07 10:35:18.898 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 10:35:18.899 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - - - 200 665 image/png 2.6397ms
+2023-04-07 10:35:19.162 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 10:35:19.670 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 507.8688ms
+2023-04-07 10:37:34.379 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:37:34.403 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:37:34.470 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:37:34.601 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 120.8377ms
+2023-04-07 10:37:34.605 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:37:34.614 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:37:34.877 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 498.7139ms
+2023-04-07 10:37:55.937 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:37:55.940 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:37:55.941 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:37:55.946 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 4.729ms
+2023-04-07 10:37:55.947 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:37:55.949 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:37:55.953 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 22.0391ms
+2023-04-07 10:37:57.388 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:37:57.388 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:37:57.388 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:37:57.391 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 2.8997ms
+2023-04-07 10:37:57.392 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:37:57.393 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:37:57.395 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 6.7526ms
+2023-04-07 10:38:01.438 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:38:01.438 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:38:01.439 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:38:01.442 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 2.8181ms
+2023-04-07 10:38:01.442 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:38:01.443 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:38:01.445 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 6.8773ms
+2023-04-07 10:38:02.012 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:38:02.015 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:38:02.015 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:38:02.048 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 32.7135ms
+2023-04-07 10:38:02.048 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:38:02.050 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:38:02.052 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 40.5131ms
+2023-04-07 10:38:02.507 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:38:02.508 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:38:02.508 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:38:02.511 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 2.63ms
+2023-04-07 10:38:02.511 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:38:02.512 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:38:02.516 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 8.2933ms
+2023-04-07 10:38:02.976 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:38:02.976 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:38:02.976 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:38:02.979 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 2.4369ms
+2023-04-07 10:38:02.980 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:38:02.981 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:38:02.983 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 7.2422ms
+2023-04-07 10:38:03.407 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:38:03.407 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:38:03.408 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:38:03.410 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 2.3312ms
+2023-04-07 10:38:03.411 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:38:03.412 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:38:03.415 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 7.5024ms
+2023-04-07 10:39:16.402 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:39:16.402 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:39:16.403 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:39:16.406 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 3.3712ms
+2023-04-07 10:39:16.407 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:39:16.408 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:39:16.410 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 7.7574ms
+2023-04-07 10:39:17.503 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:39:17.503 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:39:17.503 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:39:17.872 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 368.2671ms
+2023-04-07 10:39:17.873 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:39:17.874 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:39:17.878 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 375.0022ms
+2023-04-07 10:39:34.534 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 10:39:34.535 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:39:34.535 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:39:34.538 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 2.6997ms
+2023-04-07 10:39:34.539 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:39:34.539 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:39:34.542 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 8.0231ms
+2023-04-07 10:41:50.778 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 270
+2023-04-07 10:41:50.778 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:41:50.779 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:41:50.782 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 2.7297ms
+2023-04-07 10:41:50.783 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:41:50.785 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:41:50.789 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 270 - 500 - application/json 11.1466ms
+2023-04-07 10:56:47.525 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 10:56:47.654 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 10:56:47.656 +03:00 [INF] Hosting environment: Development
+2023-04-07 10:56:47.656 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 10:57:09.555 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 10:57:09.809 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 258.8078ms
+2023-04-07 10:57:09.871 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 10:57:10.657 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 785.7842ms
+2023-04-07 10:57:10.735 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - -
+2023-04-07 10:57:10.735 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 10:57:10.736 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 10:57:10.746 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 10:57:10.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 10:57:10.898 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 80.7092ms
+2023-04-07 10:57:10.899 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 10:57:10.900 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 10:57:10.900 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - - - 200 143943 text/css 165.0794ms
+2023-04-07 10:57:10.900 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 164.6593ms
+2023-04-07 10:57:11.021 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 10:57:11.022 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 286.3405ms
+2023-04-07 10:57:11.371 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 623.5160ms
+2023-04-07 10:57:11.820 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - -
+2023-04-07 10:57:11.820 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 10:57:11.820 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - - - 200 665 image/png 0.9065ms
+2023-04-07 10:57:12.097 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 10:57:12.582 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 485.8180ms
+2023-04-07 10:57:21.199 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 279
+2023-04-07 10:57:21.221 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:57:21.354 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:57:21.506 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 144.8188ms
+2023-04-07 10:57:21.510 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:57:21.517 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:57:21.671 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 279 - 500 - application/json 473.5749ms
+2023-04-07 10:58:02.167 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 279
+2023-04-07 10:58:02.170 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:58:02.173 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:58:02.282 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 108.5071ms
+2023-04-07 10:58:02.284 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:58:02.295 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Each parameter in the deserialization constructor on type 'RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:58:02.300 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 279 - 500 - application/json 133.9513ms
+2023-04-07 10:58:05.647 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 10:58:05.649 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 2.0848ms
+2023-04-07 10:58:05.654 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 10:58:05.838 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 184.1727ms
+2023-04-07 10:58:05.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 10:58:05.918 +03:00 [INF] The file /swagger-ui-bundle.js was not modified
+2023-04-07 10:58:05.918 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 10:58:05.918 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 304 - text/javascript 5.0544ms
+2023-04-07 10:58:05.918 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 10:58:05.918 +03:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2023-04-07 10:58:05.919 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 304 - text/javascript 0.7436ms
+2023-04-07 10:58:05.919 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 10:58:05.979 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 52.9946ms
+2023-04-07 10:58:06.846 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 926.9584ms
+2023-04-07 10:58:07.290 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 10:58:07.325 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 34.3643ms
+2023-04-07 10:58:14.675 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 279
+2023-04-07 10:58:14.682 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:58:14.698 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 10:59:06.023 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 51324.3405ms
+2023-04-07 10:59:06.029 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:59:06.038 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RewardApp.Api.WebApi.Controllers.RewardController.Create(CreateRewardCommand command) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi\Controllers\RewardController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 10:59:06.207 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 279 - 500 - application/json 51532.2119ms
+2023-04-07 10:59:38.365 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 279
+2023-04-07 10:59:38.369 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 10:59:38.369 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 11:00:06.822 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 28453.5086ms
+2023-04-07 11:00:06.823 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 11:00:06.824 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RewardApp.Api.WebApi.Controllers.RewardController.Create(CreateRewardCommand command) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi\Controllers\RewardController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 11:00:06.826 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 279 - 500 - application/json 28460.8393ms
+2023-04-07 11:00:09.950 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 279
+2023-04-07 11:00:09.950 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 11:00:09.951 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 13:31:26.144 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 13:31:29.323 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 13:31:29.324 +03:00 [INF] Hosting environment: Development
+2023-04-07 13:31:29.324 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 13:32:22.479 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 13:32:22.659 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 182.1218ms
+2023-04-07 13:32:22.695 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 13:32:23.078 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 382.4795ms
+2023-04-07 13:32:23.145 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - -
+2023-04-07 13:32:23.151 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 13:32:23.156 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 13:32:23.156 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 13:32:23.166 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 13:32:23.195 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 28.4325ms
+2023-04-07 13:32:23.273 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 13:32:23.274 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - - - 200 143943 text/css 128.1895ms
+2023-04-07 13:32:23.276 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 13:32:23.277 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 121.7205ms
+2023-04-07 13:32:23.387 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 13:32:23.387 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 236.6645ms
+2023-04-07 13:32:23.533 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 376.3295ms
+2023-04-07 13:32:23.861 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - -
+2023-04-07 13:32:23.862 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 13:32:23.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - - - 200 665 image/png 2.0076ms
+2023-04-07 13:32:24.086 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 13:32:24.560 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 474.5963ms
+2023-04-07 13:32:47.211 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 13:32:47.253 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 13:32:47.320 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 13:36:41.900 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 234567.8198ms
+2023-04-07 13:36:41.915 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 13:36:41.936 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RewardApp.Api.WebApi.Controllers.RewardController.Create(CreateRewardCommand command) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi\Controllers\RewardController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 13:37:30.747 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 283536.3211ms
+2023-04-07 13:37:38.475 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 13:37:38.478 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 13:37:38.479 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 13:37:43.672 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 5192.8097ms
+2023-04-07 13:37:43.673 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 13:37:43.674 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RewardApp.Api.WebApi.Controllers.RewardController.Create(CreateRewardCommand command) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi\Controllers\RewardController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 13:37:43.678 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 5202.4819ms
+2023-04-07 13:39:59.594 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 13:39:59.765 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 13:39:59.767 +03:00 [INF] Hosting environment: Development
+2023-04-07 13:39:59.767 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 13:40:11.727 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 13:40:11.955 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 228.5759ms
+2023-04-07 13:40:11.994 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 13:40:12.498 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 503.5786ms
+2023-04-07 13:40:12.560 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - -
+2023-04-07 13:40:12.668 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 13:40:12.677 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 13:40:12.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 13:40:12.707 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 13:40:12.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 16.5935ms
+2023-04-07 13:40:12.791 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 13:40:12.791 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 13:40:12.791 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - - - 200 143943 text/css 230.7600ms
+2023-04-07 13:40:12.791 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 114.1484ms
+2023-04-07 13:40:12.850 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 13:40:12.851 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 184.1259ms
+2023-04-07 13:40:13.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 501.5569ms
+2023-04-07 13:40:13.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - -
+2023-04-07 13:40:13.391 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 13:40:13.392 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - - - 200 665 image/png 1.5257ms
+2023-04-07 13:40:13.601 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 13:40:14.300 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 698.4370ms
+2023-04-07 13:40:32.310 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 13:40:32.324 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 13:40:32.405 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 13:43:26.263 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 173846.0007ms
+2023-04-07 13:43:26.267 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 13:43:26.273 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RewardApp.Api.Application.Features.Command.RewardUser.Create.CreateRewardCommandHandler.Handle(CreateRewardCommand request, CancellationToken cancellationToken) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\Core\RewardApp.Api.Application\Features\Command\Reward\Create\CreateRewardCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at RewardApp.Api.WebApi.Controllers.RewardController.Create(CreateRewardCommand command) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi\Controllers\RewardController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 13:43:26.559 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 174249.1369ms
+2023-04-07 13:43:35.320 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 13:43:35.324 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 13:43:35.325 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 13:43:43.604 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 8278.3751ms
+2023-04-07 13:43:43.605 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 13:43:43.606 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RewardApp.Api.Application.Features.Command.RewardUser.Create.CreateRewardCommandHandler.Handle(CreateRewardCommand request, CancellationToken cancellationToken) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\Core\RewardApp.Api.Application\Features\Command\Reward\Create\CreateRewardCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at RewardApp.Api.WebApi.Controllers.RewardController.Create(CreateRewardCommand command) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi\Controllers\RewardController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 13:43:43.612 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 8292.6083ms
+2023-04-07 13:46:01.527 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 13:46:01.588 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger - -
+2023-04-07 13:46:01.597 +03:00 [INF] Hosting environment: Development
+2023-04-07 13:46:01.597 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 13:46:01.825 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - -
+2023-04-07 13:46:01.827 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger - - - 301 - - 245.3740ms
+2023-04-07 13:46:02.284 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - - - 200 - text/html;charset=utf-8 458.9599ms
+2023-04-07 13:46:02.361 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/swagger-ui.css - -
+2023-04-07 13:46:02.363 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/swagger-ui-bundle.js - -
+2023-04-07 13:46:02.365 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 13:46:02.373 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/_vs/browserLink - -
+2023-04-07 13:46:02.377 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 13:46:02.408 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 18.6581ms
+2023-04-07 13:46:02.429 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 13:46:02.429 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 13:46:02.429 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 13:46:02.463 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/swagger-ui.css - - - 200 143943 text/css 101.7754ms
+2023-04-07 13:46:02.480 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 115.0591ms
+2023-04-07 13:46:02.580 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 207.0096ms
+2023-04-07 13:46:02.598 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 235.1427ms
+2023-04-07 13:46:03.002 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/favicon-16x16.png - -
+2023-04-07 13:46:03.008 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 13:46:03.009 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/favicon-16x16.png - - - 200 665 image/png 6.6163ms
+2023-04-07 13:46:03.183 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - -
+2023-04-07 13:46:03.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 681.2903ms
+2023-04-07 13:46:26.569 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/reward/create application/json 284
+2023-04-07 13:46:26.585 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 13:46:26.635 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 13:46:48.012 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 21369.6157ms
+2023-04-07 13:46:48.016 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 13:46:48.022 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RewardApp.Api.Application.Features.Command.RewardUser.Create.CreateRewardCommandHandler.Handle(CreateRewardCommand request, CancellationToken cancellationToken) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\Core\RewardApp.Api.Application\Features\Command\Reward\Create\CreateRewardCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at RewardApp.Api.WebApi.Controllers.RewardController.Create(CreateRewardCommand command) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi\Controllers\RewardController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 13:46:48.120 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/reward/create application/json 284 - 500 - application/json 21550.9261ms
+2023-04-07 14:25:06.120 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 14:25:06.255 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 14:25:06.258 +03:00 [INF] Hosting environment: Development
+2023-04-07 14:25:06.259 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 14:25:15.193 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 14:25:15.407 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 223.3786ms
+2023-04-07 14:25:15.467 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 14:25:16.066 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 599.3573ms
+2023-04-07 14:25:16.156 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - -
+2023-04-07 14:25:16.163 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 14:25:16.168 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 14:25:16.178 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 14:25:16.189 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 14:25:16.252 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 62.5313ms
+2023-04-07 14:25:16.346 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 14:25:16.346 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - - - 200 143943 text/css 189.8837ms
+2023-04-07 14:25:16.369 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 14:25:16.369 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 201.4897ms
+2023-04-07 14:25:16.465 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 14:25:16.465 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 302.3119ms
+2023-04-07 14:25:16.786 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 607.8200ms
+2023-04-07 14:25:17.086 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - -
+2023-04-07 14:25:17.086 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 14:25:17.087 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - - - 200 665 image/png 0.8117ms
+2023-04-07 14:25:17.352 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 14:25:18.032 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 675.6573ms
+2023-04-07 14:28:33.191 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/users/create application/json 177
+2023-04-07 14:28:33.207 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.UserController.Create (RewardApp.Api.WebApi)'
+2023-04-07 14:28:33.296 +03:00 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.CreateUserCommand) on controller RewardApp.Api.WebApi.Controllers.UserController (RewardApp.Api.WebApi).
+2023-04-07 14:28:49.596 +03:00 [INF] Executed DbCommand (219ms) [Parameters=[@__request_EmailAddress_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Address", u."CreateDate", u."EmailAddress", u."EmailConfirmed", u."FirstName", u."LastName", u."Password", u."PhoneNumber", u."UserName"
+FROM dbo."user" AS u
+WHERE u."EmailAddress" = @__request_EmailAddress_0
+LIMIT 2
+2023-04-07 14:30:07.749 +03:00 [INF] Executed DbCommand (177ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?', @p4='?' (DbType = Boolean), @p5='?', @p6='?', @p7='?', @p8='?', @p9='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO dbo."user" ("Id", "Address", "CreateDate", "EmailAddress", "EmailConfirmed", "FirstName", "LastName", "Password", "PhoneNumber", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2023-04-07 14:36:12.033 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-04-07 14:36:12.056 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.UserController.Create (RewardApp.Api.WebApi) in 458754.1251ms
+2023-04-07 14:36:12.057 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.UserController.Create (RewardApp.Api.WebApi)'
+2023-04-07 14:36:12.082 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/users/create application/json 177 - 0 - application/json;+charset=utf-8 458897.3351ms
+2023-04-07 14:38:08.201 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 14:38:08.204 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 14:38:08.210 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 14:48:50.854 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 14:48:51.045 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 14:48:51.047 +03:00 [INF] Hosting environment: Development
+2023-04-07 14:48:51.047 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 14:48:54.089 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 14:48:55.114 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 1026.6539ms
+2023-04-07 14:48:55.520 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 14:48:55.671 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 14:48:55.699 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 27.6296ms
+2023-04-07 14:48:57.024 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1503.9868ms
+2023-04-07 14:48:57.503 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 14:48:58.205 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 702.0500ms
+2023-04-07 14:49:22.328 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 14:49:22.345 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 14:49:22.468 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 14:50:15.486 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 14:50:15.574 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 14:50:15.576 +03:00 [INF] Hosting environment: Development
+2023-04-07 14:50:15.576 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 14:50:19.041 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 14:50:20.499 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 1460.8517ms
+2023-04-07 14:50:20.858 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 14:50:21.042 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 14:50:21.075 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 32.8771ms
+2023-04-07 14:50:21.625 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 766.7070ms
+2023-04-07 14:50:22.041 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 14:50:22.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 790.2632ms
+2023-04-07 14:50:36.407 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 14:50:36.426 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 14:50:36.516 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 14:50:45.930 +03:00 [INF] Executed DbCommand (125ms) [Parameters=[@__request_RewardName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."CreateDate", r."CreatedById", r."Description", r."IsDefault", r."Logo", r."Mod", r."Repeat", r."RewardKey", r."RewardName"
+FROM dbo.reward AS r
+WHERE r."RewardName" = @__request_RewardName_0
+LIMIT 2
+2023-04-07 14:51:27.442 +03:00 [INF] Executed DbCommand (161ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Guid), @p3='?', @p4='?' (DbType = Boolean), @p5='?', @p6='?' (DbType = Int16), @p7='?' (DbType = Int16), @p8='?' (DbType = Guid), @p9='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO dbo.reward ("Id", "CreateDate", "CreatedById", "Description", "IsDefault", "Logo", "Mod", "Repeat", "RewardKey", "RewardName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2023-04-07 14:51:27.654 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-04-07 14:51:27.682 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 51156.0528ms
+2023-04-07 14:51:27.684 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 14:51:27.737 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 200 - application/json;+charset=utf-8 51330.1319ms
+2023-04-07 14:51:27.781 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 14:51:27.857 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 78.7644ms
+2023-04-07 14:51:27.937 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 14:51:27.940 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 14:51:27.941 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 14:51:27.961 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 14:51:28.002 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 40.7959ms
+2023-04-07 14:51:28.025 +03:00 [INF] The file /swagger-ui-bundle.js was not modified
+2023-04-07 14:51:28.030 +03:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2023-04-07 14:51:28.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 304 - text/javascript 93.8347ms
+2023-04-07 14:51:28.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 304 - text/javascript 92.6116ms
+2023-04-07 14:51:28.254 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 313.6886ms
+2023-04-07 14:51:28.893 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 14:51:28.942 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 48.7310ms
+2023-04-07 14:51:58.450 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 284
+2023-04-07 14:51:58.451 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 14:51:58.470 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 14:51:58.706 +03:00 [INF] Executed DbCommand (86ms) [Parameters=[@__request_RewardName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."CreateDate", r."CreatedById", r."Description", r."IsDefault", r."Logo", r."Mod", r."Repeat", r."RewardKey", r."RewardName"
+FROM dbo.reward AS r
+WHERE r."RewardName" = @__request_RewardName_0
+LIMIT 2
+2023-04-07 14:51:59.831 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 1361.2188ms
+2023-04-07 14:51:59.833 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 14:51:59.838 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+RewardApp.Common.Exceptions.DatabaseValidationException: Ödül zaten kayıtlı.
+   at RewardApp.Api.Application.Features.Command.RewardUser.Create.CreateRewardCommandHandler.Handle(CreateRewardCommand request, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at RewardApp.Api.WebApi.Controllers.RewardController.Create(CreateRewardCommand command) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi\Controllers\RewardController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 14:52:00.051 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 284 - 500 - application/json 1601.0267ms
+2023-04-07 14:53:14.530 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/reward/create application/json 281
+2023-04-07 14:53:14.533 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 14:53:14.533 +03:00 [INF] Route matched with {action = "Create", controller = "Reward"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.Reward.CreateRewardCommand) on controller RewardApp.Api.WebApi.Controllers.RewardController (RewardApp.Api.WebApi).
+2023-04-07 14:53:16.884 +03:00 [INF] Executed DbCommand (86ms) [Parameters=[@__request_RewardName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."CreateDate", r."CreatedById", r."Description", r."IsDefault", r."Logo", r."Mod", r."Repeat", r."RewardKey", r."RewardName"
+FROM dbo.reward AS r
+WHERE r."RewardName" = @__request_RewardName_0
+LIMIT 2
+2023-04-07 14:53:20.505 +03:00 [INF] Executed DbCommand (67ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Guid), @p3='?', @p4='?' (DbType = Boolean), @p5='?', @p6='?' (DbType = Int16), @p7='?' (DbType = Int16), @p8='?' (DbType = Guid), @p9='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO dbo.reward ("Id", "CreateDate", "CreatedById", "Description", "IsDefault", "Logo", "Mod", "Repeat", "RewardKey", "RewardName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2023-04-07 14:53:24.465 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-04-07 14:53:24.467 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi) in 9934.1727ms
+2023-04-07 14:53:24.468 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardController.Create (RewardApp.Api.WebApi)'
+2023-04-07 14:53:24.468 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/reward/create application/json 281 - 200 - application/json;+charset=utf-8 9938.3280ms
+2023-04-07 15:31:28.502 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 15:31:28.652 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 15:31:28.654 +03:00 [INF] Hosting environment: Development
+2023-04-07 15:31:28.654 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 15:31:43.690 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 15:31:43.924 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 239.5276ms
+2023-04-07 15:31:44.060 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 15:31:44.688 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 627.4824ms
+2023-04-07 15:31:44.766 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - -
+2023-04-07 15:31:44.767 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 15:31:44.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 15:31:44.770 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 15:31:44.799 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 15:31:44.827 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 28.5304ms
+2023-04-07 15:31:44.867 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 15:31:44.867 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - - - 200 143943 text/css 100.5852ms
+2023-04-07 15:31:44.929 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 15:31:44.935 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 166.4442ms
+2023-04-07 15:31:45.017 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 15:31:45.038 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 270.9980ms
+2023-04-07 15:31:45.096 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 326.1378ms
+2023-04-07 15:31:45.608 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - -
+2023-04-07 15:31:45.609 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 15:31:45.609 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - - - 200 665 image/png 0.9727ms
+2023-04-07 15:31:45.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 15:31:46.556 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 600.1681ms
+2023-04-07 15:37:29.940 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 15:37:29.945 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 5.0747ms
+2023-04-07 15:37:29.951 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 15:37:29.969 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 18.3375ms
+2023-04-07 15:37:30.039 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 15:37:30.039 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 15:37:30.044 +03:00 [INF] The file /swagger-ui-bundle.js was not modified
+2023-04-07 15:37:30.045 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 304 - text/javascript 5.6332ms
+2023-04-07 15:37:30.045 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 15:37:30.062 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 15:37:30.066 +03:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2023-04-07 15:37:30.067 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 4.7027ms
+2023-04-07 15:37:30.067 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 304 - text/javascript 27.5901ms
+2023-04-07 15:37:30.301 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 255.2578ms
+2023-04-07 15:37:30.873 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 15:37:30.945 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 71.2105ms
+2023-04-07 15:39:45.044 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 15:39:45.138 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 15:39:45.139 +03:00 [INF] Hosting environment: Development
+2023-04-07 15:39:45.140 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 15:39:57.757 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 15:39:58.275 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 525.4240ms
+2023-04-07 15:39:58.798 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 15:39:59.505 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 707.3908ms
+2023-04-07 15:39:59.598 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - -
+2023-04-07 15:39:59.598 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 15:39:59.599 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 15:39:59.599 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 15:39:59.634 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 15:39:59.705 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 15:39:59.706 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - - - 200 143943 text/css 107.2973ms
+2023-04-07 15:39:59.714 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 79.7203ms
+2023-04-07 15:39:59.749 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 15:39:59.751 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 151.2251ms
+2023-04-07 15:39:59.837 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 15:39:59.845 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 246.4906ms
+2023-04-07 15:40:00.074 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 474.4271ms
+2023-04-07 15:40:00.385 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - -
+2023-04-07 15:40:00.386 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 15:40:00.391 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - - - 200 665 image/png 1.6941ms
+2023-04-07 15:40:00.654 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 15:40:01.207 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 553.9064ms
+2023-04-07 15:40:32.589 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/rewarduser/create application/json 755
+2023-04-07 15:40:32.600 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardUserController.Create (RewardApp.Api.WebApi)'
+2023-04-07 15:40:32.680 +03:00 [INF] Route matched with {action = "Create", controller = "RewardUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.RewardUser.CreateRewardUserCommand) on controller RewardApp.Api.WebApi.Controllers.RewardUserController (RewardApp.Api.WebApi).
+2023-04-07 15:41:36.280 +03:00 [ERR] Failed executing DbCommand (193ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Object), @p3='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO dbo.rewarduser ("Id", "RewardId", "RewardUserDetail", "UserId")
+VALUES (@p0, @p1, @p2, @p3);
+2023-04-07 15:41:36.398 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'RewardApp.Infrastructure.Persistence.Context.RewardAppContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "RewardUserDetail" of relation "rewarduser" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|226_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "RewardUserDetail" of relation "rewarduser" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: dbo
+    TableName: rewarduser
+    ColumnName: RewardUserDetail
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "RewardUserDetail" of relation "rewarduser" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|226_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "RewardUserDetail" of relation "rewarduser" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: dbo
+    TableName: rewarduser
+    ColumnName: RewardUserDetail
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-04-07 15:41:37.373 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardUserController.Create (RewardApp.Api.WebApi) in 64687.4689ms
+2023-04-07 15:41:37.375 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardUserController.Create (RewardApp.Api.WebApi)'
+2023-04-07 15:41:37.382 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "RewardUserDetail" of relation "rewarduser" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|226_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "RewardUserDetail" of relation "rewarduser" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: dbo
+    TableName: rewarduser
+    ColumnName: RewardUserDetail
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at RewardApp.Infrastructure.Persistence.Repositories.GenericRepository`1.AddAsync(TEntity entity) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\Infrastructure\RewardApp.Infrastructure.Persistence\Repositories\GenericRepository.cs:line 28
+   at RewardApp.Api.Application.Features.Command.RewardUser.Create.CreateRewardUserCommandHandler.Handle(CreateRewardUserCommand request, CancellationToken cancellationToken) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\Core\RewardApp.Api.Application\Features\Command\RewardUser\Create\CreateRewardUserCommandHandler.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at RewardApp.Api.WebApi.Controllers.RewardUserController.Create(CreateRewardUserCommand command) in C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi\Controllers\RewardUserController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-04-07 15:41:38.135 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/rewarduser/create application/json 755 - 500 - application/json 65545.9000ms
+2023-04-07 15:43:39.607 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 15:43:39.684 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 15:43:39.701 +03:00 [INF] Hosting environment: Development
+2023-04-07 15:43:39.701 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 15:43:49.511 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 15:43:49.683 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 174.0953ms
+2023-04-07 15:43:49.713 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 15:43:50.369 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 654.8143ms
+2023-04-07 15:43:50.429 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - -
+2023-04-07 15:43:50.430 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 15:43:50.436 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 15:43:50.449 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 15:43:50.477 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 15:43:50.503 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 26.2787ms
+2023-04-07 15:43:50.553 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 15:43:50.553 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 15:43:50.554 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - - - 200 143943 text/css 124.7203ms
+2023-04-07 15:43:50.554 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 118.3647ms
+2023-04-07 15:43:50.618 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 15:43:50.619 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 188.5987ms
+2023-04-07 15:43:50.769 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 321.6108ms
+2023-04-07 15:43:51.091 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - -
+2023-04-07 15:43:51.091 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 15:43:51.091 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - - - 200 665 image/png 1.2698ms
+2023-04-07 15:43:51.342 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 15:43:51.877 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 535.3539ms
+2023-04-07 15:44:26.760 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/rewarduser/create application/json 756
+2023-04-07 15:44:26.787 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardUserController.Create (RewardApp.Api.WebApi)'
+2023-04-07 15:44:26.971 +03:00 [INF] Route matched with {action = "Create", controller = "RewardUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.RewardUser.CreateRewardUserCommand) on controller RewardApp.Api.WebApi.Controllers.RewardUserController (RewardApp.Api.WebApi).
+2023-04-07 16:01:17.591 +03:00 [INF] Now listening on: https://localhost:7130
+2023-04-07 16:01:17.665 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 16:01:17.666 +03:00 [INF] Hosting environment: Development
+2023-04-07 16:01:17.667 +03:00 [INF] Content root path: C:\Users\yeyik\Desktop\tryOut\rewardApp\RewardApp\src\Api\WebApi\RewardApp.Api.WebApi
+2023-04-07 16:01:36.424 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - -
+2023-04-07 16:01:36.614 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - - - 301 0 - 194.0008ms
+2023-04-07 16:01:36.649 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - -
+2023-04-07 16:01:37.101 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - - - 200 - text/html;charset=utf-8 452.1712ms
+2023-04-07 16:01:37.172 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - -
+2023-04-07 16:01:37.177 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - -
+2023-04-07 16:01:37.177 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 16:01:37.178 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - -
+2023-04-07 16:01:37.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 16:01:37.219 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 31.8473ms
+2023-04-07 16:01:37.334 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 16:01:37.335 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - - - 200 143943 text/css 163.0459ms
+2023-04-07 16:01:37.380 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 16:01:37.383 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 204.2984ms
+2023-04-07 16:01:37.431 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 16:01:37.432 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 254.9624ms
+2023-04-07 16:01:37.805 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 627.1481ms
+2023-04-07 16:01:38.048 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - -
+2023-04-07 16:01:38.050 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-04-07 16:01:38.050 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-16x16.png - - - 200 665 image/png 1.8604ms
+2023-04-07 16:01:38.316 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - -
+2023-04-07 16:01:38.956 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 639.7102ms
+2023-04-07 16:01:51.744 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7130/api/rewarduser/create application/json 756
+2023-04-07 16:01:51.761 +03:00 [INF] Executing endpoint 'RewardApp.Api.WebApi.Controllers.RewardUserController.Create (RewardApp.Api.WebApi)'
+2023-04-07 16:01:51.897 +03:00 [INF] Route matched with {action = "Create", controller = "RewardUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RewardApp.Common.Models.RequestModels.RewardUser.CreateRewardUserCommand) on controller RewardApp.Api.WebApi.Controllers.RewardUserController (RewardApp.Api.WebApi).
+2023-04-07 16:02:15.842 +03:00 [INF] Executed DbCommand (431ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Object), @p3='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO dbo.rewarduser ("Id", "RewardId", "RewardUserDetails", "UserId")
+VALUES (@p0, @p1, @p2, @p3);
+2023-04-07 16:02:21.655 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-04-07 16:02:21.694 +03:00 [INF] Executed action RewardApp.Api.WebApi.Controllers.RewardUserController.Create (RewardApp.Api.WebApi) in 29776.1465ms
+2023-04-07 16:02:21.696 +03:00 [INF] Executed endpoint 'RewardApp.Api.WebApi.Controllers.RewardUserController.Create (RewardApp.Api.WebApi)'
+2023-04-07 16:02:21.724 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7130/api/rewarduser/create application/json 756 - 200 - application/json;+charset=utf-8 29979.9781ms

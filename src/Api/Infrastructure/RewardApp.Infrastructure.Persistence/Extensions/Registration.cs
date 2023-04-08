@@ -28,6 +28,9 @@ public static class Registration
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IEmailConfirmationRepository, EmailConfirmationRepository>();
+        services.AddScoped<IAssignmentRepository, AssignmentRepository>();
+        services.AddTransient<IRewardUserRepository, RewardUserRepository>();
+        services.AddScoped<IRewardRepository, RewardRepository>();
 
         return services;
     }

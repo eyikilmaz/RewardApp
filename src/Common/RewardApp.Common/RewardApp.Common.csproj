@@ -15,4 +15,8 @@
     <Folder Include="Events\User\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Api\Core\RewardApp.Api.Domain\RewardApp.Api.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
