@@ -3,6 +3,8 @@ using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using RewarApp.Api.Application.Interfaces.Repositories;
+using RewardApp.Api.Application.Interfaces.Repositories;
+using RewardApp.Api.Domain.Models;
 using RewardApp.Common.Exceptions;
 using RewardApp.Common.Infrastructure;
 using RewardApp.Common.Models.Queries.User;
@@ -22,11 +24,13 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUs
     private readonly IMapper mapper;
     private readonly IUserRepository userRepository;
     private readonly IConfiguration configuration;
-    public LoginUserCommandHandler(IUserRepository userRepository, IMapper mapper, IConfiguration configuration)
+    private readonly IRewardUserRepository rewardUserRepository;
+    public LoginUserCommandHandler(IUserRepository userRepository, IMapper mapper, IConfiguration configuration, IRewardUserRepository rewardUserRepository)
     {
         this.userRepository = userRepository;
         this.mapper = mapper;
         this.configuration = configuration;
+        this.rewardUserRepository = rewardUserRepository;
     }
 
     public async Task<LoginUserViewModel> Handle(LoginUserCommand request, CancellationToken cancellationToken)
@@ -56,6 +60,8 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUs
 
         result.Token = GenerateToken(claims);
 
+        GenerateFirstRewardTask(result.Id);
+
         return result;
     }
 
@@ -71,5 +77,38 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUs
                                          notBefore: DateTime.Now);
 
         return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+
+    private async void GenerateFirstRewardTask(Guid userId)
+    {
+        var exists = rewardUserRepository.GetList(i => i.UserId== userId);
+
+        if (exists is not null)
+            return ;
+
+        List<RewardUserDetail> rewardUserDetails = new List<RewardUserDetail>();
+
+        int defaultCount = 60;
+        for (int i = 0; i < defaultCount; i++)
+        {
+            rewardUserDetails.Add(new RewardUserDetail
+            {
+                CreateDate = DateTime.Now,
+                CurrentRewardId = new Guid(),
+                Description = "",
+                IsOpen= false,
+                LastRewardId = new Guid(),
+                Mod = 2,
+                Uid = Guid.NewGuid()
+            });
+        }
+
+        Domain.Models.RewardUser rewardUser = new Domain.Models.RewardUser()
+        {
+            UserId = userId,
+            RewardUserDetails = rewardUserDetails
+        };
+
+       await rewardUserRepository.AddAsync(rewardUser);
     }
 }

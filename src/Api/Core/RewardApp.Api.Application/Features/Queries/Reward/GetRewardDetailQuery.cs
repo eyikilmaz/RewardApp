@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using RewardApp.Common.Models.Queries.Assignment;
+using RewardApp.Common.Models.Queries.Reward;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace RewardApp.Api.Application.Features.Queries.Assignment;
 
-public class GetRewardDetailQuery : IRequest<AssignmentDetailViewModel>
+public class GetRewardDetailQuery : IRequest<RewardDetailViewModel>
 {
-    public GetRewardDetailQuery(Guid? userId)
+    public GetRewardDetailQuery(Guid? rewardId)
     {
-        UserId = userId;
+        RewardId = rewardId;
     }
 
-    public Guid? UserId { get; set; }
+    public Guid? RewardId { get; set; }
 }

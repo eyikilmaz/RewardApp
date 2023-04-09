@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using RewardApp.Api.Application.Features.Command.Assignment.Delete;
+using RewardApp.Api.Application.Features.Queries.Assignment;
 using RewardApp.Common.Models.RequestModels;
 using RewardApp.Common.Models.RequestModels.Reward;
 using RewardApp.Common.Models.RequestModels.RewardUser;
@@ -16,6 +17,15 @@ public class RewardController : BaseController
     {
         this.mediator = mediator;
     }
+
+    [HttpGet("{rewardid}")]
+    public async Task<IActionResult> Get(Guid rewardid)
+    {
+        var user = await mediator.Send(new GetRewardDetailQuery(rewardid));
+
+        return Ok(user);
+    }
+
 
     [HttpPost]
     [Route("create")]
