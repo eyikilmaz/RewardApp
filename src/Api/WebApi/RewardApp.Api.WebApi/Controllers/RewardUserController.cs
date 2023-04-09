@@ -23,4 +23,15 @@ public class RewardUserController : BaseController
 
         return Ok(result);
     }
+    
+    [HttpPost]
+    [Route("openreward/{userid}")]
+    public async Task<IActionResult> OpenReward(Guid userid, Guid uid)
+    {
+        var result = await mediator.Send(new CreateEntryCommentVoteCommand(entryCommentId, voteType, UserId.Value));
+
+        //var result = await mediator.Send(command);
+
+        return Ok(result);
+    }
 }
