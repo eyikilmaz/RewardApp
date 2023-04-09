@@ -63,7 +63,7 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUs
 
         result.Token = GenerateToken(claims);
 
-        GenerateFirstRewardInit(result.Id);
+       await GenerateFirstRewardInit(result.Id);
 
         return result;
     }
@@ -82,7 +82,7 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUs
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
 
-    private async void GenerateFirstRewardInit(Guid userId)
+    private async Task GenerateFirstRewardInit(Guid userId)
     {
         var exists = rewardUserRepository.GetList(i => i.UserId == userId).Result;
 
