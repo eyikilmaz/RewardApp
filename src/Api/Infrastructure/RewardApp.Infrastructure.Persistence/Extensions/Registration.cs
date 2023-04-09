@@ -30,7 +30,7 @@ public static class Registration
         services.AddScoped<IEmailConfirmationRepository, EmailConfirmationRepository>();
         services.AddScoped<IAssignmentRepository, AssignmentRepository>();
         services.AddTransient<IRewardUserRepository, RewardUserRepository>();
-        services.AddScoped<IRewardRepository, RewardRepository>();
+        services.AddTransient<IRewardRepository, RewardRepository>();
 
         return services;
     }

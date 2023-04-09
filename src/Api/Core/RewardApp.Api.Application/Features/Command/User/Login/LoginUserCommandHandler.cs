@@ -25,12 +25,14 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUs
     private readonly IUserRepository userRepository;
     private readonly IConfiguration configuration;
     private readonly IRewardUserRepository rewardUserRepository;
-    public LoginUserCommandHandler(IUserRepository userRepository, IMapper mapper, IConfiguration configuration, IRewardUserRepository rewardUserRepository)
+    private readonly IRewardRepository rewardRepository;
+    public LoginUserCommandHandler(IUserRepository userRepository, IMapper mapper, IConfiguration configuration, IRewardUserRepository rewardUserRepository, IRewardRepository rewardRepository)
     {
         this.userRepository = userRepository;
         this.mapper = mapper;
         this.configuration = configuration;
         this.rewardUserRepository = rewardUserRepository;
+        this.rewardRepository = rewardRepository;
     }
 
     public async Task<LoginUserViewModel> Handle(LoginUserCommand request, CancellationToken cancellationToken)
@@ -41,6 +43,7 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUs
             throw new DatabaseValidationException("User not found!");
 
         var pass = PasswordEncryptor.Encrpt(request.Password);
+        pass = request.Password;
         if (dbUser.Password != pass)
             throw new DatabaseValidationException("Password is wrong!");
 
@@ -60,7 +63,7 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUs
 
         result.Token = GenerateToken(claims);
 
-        GenerateFirstRewardTask(result.Id);
+        GenerateFirstRewardInit(result.Id);
 
         return result;
     }
@@ -79,28 +82,49 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUs
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
 
-    private async void GenerateFirstRewardTask(Guid userId)
+    private async void GenerateFirstRewardInit(Guid userId)
     {
-        var exists = rewardUserRepository.GetList(i => i.UserId== userId);
+        var exists = rewardUserRepository.GetList(i => i.UserId == userId).Result;
 
-        if (exists is not null)
-            return ;
+        if (exists.Any())
+            return;
+
+        var rewards = await rewardRepository.GetAll();
+        var bombRewards = rewards.Where(r => r.RewardName == "Bomb");
+        var defaultRewardsNotBomb = rewards.Where(r => r.RewardName != "Bomb" && r.IsDefault);
 
         List<RewardUserDetail> rewardUserDetails = new List<RewardUserDetail>();
 
-        int defaultCount = 60;
-        for (int i = 0; i < defaultCount; i++)
+        var lineSize = 15;
+        foreach (var reward in rewards)
         {
-            rewardUserDetails.Add(new RewardUserDetail
+            if (reward.IsDefault)
             {
-                CreateDate = DateTime.Now,
-                CurrentRewardId = new Guid(),
-                Description = "",
-                IsOpen= false,
-                LastRewardId = new Guid(),
-                Mod = 2,
-                Uid = Guid.NewGuid()
-            });
+                int defaultCount = 48;
+                if (reward.RewardName != "Bomb")
+                    defaultCount = reward.Repeat * 4;
+
+                FillRewardDetail(rewardUserDetails, reward, defaultCount);
+            }
+            else
+            {
+                int totalLineLength = 0;
+                totalLineLength += reward.Repeat;
+
+                FillRewardDetail(rewardUserDetails, reward, reward.Repeat);
+
+                foreach (var drnb in defaultRewardsNotBomb)
+                {
+                    totalLineLength += drnb.Repeat;
+                    FillRewardDetail(rewardUserDetails, drnb, drnb.Repeat);
+                }
+
+                foreach (var rb in bombRewards)
+                {
+                    FillRewardDetail(rewardUserDetails, rb, lineSize - totalLineLength);
+                }
+            }
+
         }
 
         Domain.Models.RewardUser rewardUser = new Domain.Models.RewardUser()
@@ -109,6 +133,23 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUs
             RewardUserDetails = rewardUserDetails
         };
 
-       await rewardUserRepository.AddAsync(rewardUser);
+        await rewardUserRepository.AddAsync(rewardUser);
+    }
+
+    private void FillRewardDetail(List<RewardUserDetail> rewardUserDetails, Reward reward, int repeat)
+    {
+        for (int i = 0; i < repeat; i++)
+        {
+            rewardUserDetails.Add(new RewardUserDetail
+            {
+                CreateDate = reward.CreateDate,
+                CurrentRewardId = reward.Id,
+                Description = reward.Description,
+                IsOpen = false,
+                LastRewardId = new Guid(),
+                Mod = reward.Mod,
+                Uid = Guid.NewGuid()
+            });
+        }
     }
 }
