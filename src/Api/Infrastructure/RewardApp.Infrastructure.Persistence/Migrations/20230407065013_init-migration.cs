@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using RewardApp.Api.Domain.Models;
 
 #nullable disable
 
@@ -129,14 +130,9 @@ namespace RewardApp.Infrastructure.Persistence.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Uid = table.Column<Guid>(type: "uuid", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
-                    RewardId = table.Column<Guid>(type: "uuid", nullable: false),
-                    IsOpen = table.Column<bool>(type: "boolean", nullable: false),
-                    Mod = table.Column<short>(type: "smallint", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: false),
-                    LastRewardId = table.Column<Guid>(type: "uuid", nullable: false)
+                    RewardUserDetail = table.Column<RewardUserDetail>(type: "jsonb", nullable: false),
+                    RewardId = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -146,8 +142,7 @@ namespace RewardApp.Infrastructure.Persistence.Migrations
                         column: x => x.RewardId,
                         principalSchema: "dbo",
                         principalTable: "reward",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_rewarduser_user_UserId",
                         column: x => x.UserId,

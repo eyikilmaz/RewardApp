@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+using RewardApp.Api.Domain.Models;
 using RewardApp.Infrastructure.Persistence.Context;
 
 #nullable disable
@@ -12,7 +13,7 @@ using RewardApp.Infrastructure.Persistence.Context;
 namespace RewardApp.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(RewardAppContext))]
-    [Migration("20230117184550_init-migration")]
+    [Migration("20230407065013_init-migration")]
     partial class initmigration
     {
         /// <inheritdoc />
@@ -124,27 +125,12 @@ namespace RewardApp.Infrastructure.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<Guid?>("RewardId")
+                        .HasColumnType("uuid");
 
-                    b.Property<string>("Description")
+                    b.Property<RewardUserDetail>("RewardUserDetail")
                         .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<bool>("IsOpen")
-                        .HasColumnType("boolean");
-
-                    b.Property<Guid>("LastRewardId")
-                        .HasColumnType("uuid");
-
-                    b.Property<short>("Mod")
-                        .HasColumnType("smallint");
-
-                    b.Property<Guid>("RewardId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("Uid")
-                        .HasColumnType("uuid");
+                        .HasColumnType("jsonb");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
@@ -255,19 +241,15 @@ namespace RewardApp.Infrastructure.Persistence.Migrations
 
             modelBuilder.Entity("RewardApp.Api.Domain.Models.RewardUser", b =>
                 {
-                    b.HasOne("RewardApp.Api.Domain.Models.Reward", "Reward")
+                    b.HasOne("RewardApp.Api.Domain.Models.Reward", null)
                         .WithMany("RewardUsers")
-                        .HasForeignKey("RewardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RewardId");
 
                     b.HasOne("RewardApp.Api.Domain.Models.User", "User")
                         .WithMany("RewardUsers")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.Navigation("Reward");
 
                     b.Navigation("User");
                 });
