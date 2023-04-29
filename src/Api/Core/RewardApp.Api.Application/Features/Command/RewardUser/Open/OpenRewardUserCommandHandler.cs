@@ -32,7 +32,7 @@ public class OpenRewardUserCommandHandler : IRequestHandler<OpenRewardUserComman
         var existsRewardUser = rewardUserRepository.GetList(i => i.UserId == request.UserId).Result.FirstOrDefault();
 
         if (existsRewardUser is null)
-            return new OpenRewardUserViewModel() { GameResult = GameResult.Continue, RewardUserDetails = null};
+            return new OpenRewardUserViewModel() { GameResult = GameResult.Continue, RewardUserDetails = null };
 
         var selectedReward = existsRewardUser.RewardUserDetails.Where(r => r.Uid == request.UId).FirstOrDefault();
         var openRewards = existsRewardUser.RewardUserDetails.Where(r => r.IsOpen).ToList();
@@ -41,7 +41,7 @@ public class OpenRewardUserCommandHandler : IRequestHandler<OpenRewardUserComman
         {
             foreach (var item in existsRewardUser.RewardUserDetails)
             {
-                if (item.Uid == request.UId)
+                if (item.Uid == selectedReward.Uid)
                     item.IsOpen = true;
 
                 item.Uid = Guid.NewGuid();
@@ -58,24 +58,50 @@ public class OpenRewardUserCommandHandler : IRequestHandler<OpenRewardUserComman
         if (selectedReward.LastRewardId == selectedReward.CurrentRewardId) // same reward
         {
             if (selectedReward.CurrentRewardId == bomb.Id)
+            {
+                await OpenTrueAndUpdate(existsRewardUser, selectedReward);
                 return new OpenRewardUserViewModel() { GameResult = GameResult.Continue, RewardUserDetails = existsRewardUser.RewardUserDetails };
-
+            }
             var winCount = openRewards.Where(i => i.CurrentRewardId == selectedReward.CurrentRewardId).Count();
 
             if (winCount + 1 == selectedReward.Mod)
+            {
+                await OpenTrueAndUpdate(existsRewardUser, selectedReward, false);
+                await MixAndUpdate(rewardUser: existsRewardUser);
                 return new OpenRewardUserViewModel() { GameResult = GameResult.Win, RewardUserDetails = existsRewardUser.RewardUserDetails };
+            }
         }
         else
         {
             if (selectedReward.CurrentRewardId != bomb.Id)
+            {
+                await OpenTrueAndUpdate(existsRewardUser, selectedReward, false);
+                await MixAndUpdate(rewardUser: existsRewardUser);
                 return new OpenRewardUserViewModel() { GameResult = GameResult.Lose, RewardUserDetails = existsRewardUser.RewardUserDetails };
+            }
+              
 
+            await OpenTrueAndUpdate(existsRewardUser, selectedReward, false);
             await MixAndUpdate(rewardUser: existsRewardUser);
             return new OpenRewardUserViewModel() { GameResult = GameResult.Continue, RewardUserDetails = existsRewardUser.RewardUserDetails };
         }
 
-        await MixAndUpdate(rewardUser: existsRewardUser);
         return new OpenRewardUserViewModel() { GameResult = GameResult.Continue, RewardUserDetails = existsRewardUser.RewardUserDetails };
+    }
+
+    private async Task OpenTrueAndUpdate(Domain.Models.RewardUser rewardUser, RewardUserDetail selectedReward, bool dbUpdate = true)
+    {
+        foreach (var item in rewardUser.RewardUserDetails)
+        {
+            if (item.Uid == selectedReward.Uid)
+            {
+                item.IsOpen = true;
+                break;
+            }
+        }
+
+        if (dbUpdate)
+            await rewardUserRepository.UpdateAsync(rewardUser);
     }
 
     private async Task MixAndUpdate(Domain.Models.RewardUser rewardUser)

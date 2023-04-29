@@ -95,36 +95,37 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUs
 
         List<RewardUserDetail> rewardUserDetails = new List<RewardUserDetail>();
 
-        var lineSize = 15;
+        var totalCount = 60;
+        int totalAdded = 0;
         foreach (var reward in rewards)
         {
             if (reward.IsDefault)
             {
-                int defaultCount = 48;
+                int defaultCount = 30;
                 if (reward.RewardName != "Bomb")
-                    defaultCount = reward.Repeat * 4;
+                    defaultCount = reward.Repeat * 2;
+
+                totalAdded += defaultCount;
 
                 FillRewardDetail(rewardUserDetails, reward, defaultCount);
             }
             else
             {
-                int totalLineLength = 0;
-                totalLineLength += reward.Repeat;
+                totalAdded += reward.Repeat;
 
                 FillRewardDetail(rewardUserDetails, reward, reward.Repeat);
-
-                foreach (var drnb in defaultRewardsNotBomb)
-                {
-                    totalLineLength += drnb.Repeat;
-                    FillRewardDetail(rewardUserDetails, drnb, drnb.Repeat);
-                }
-
-                foreach (var rb in bombRewards)
-                {
-                    FillRewardDetail(rewardUserDetails, rb, lineSize - totalLineLength);
-                }
             }
+        }
 
+        foreach (var drnb in defaultRewardsNotBomb)
+        {
+            totalAdded += drnb.Repeat;
+            FillRewardDetail(rewardUserDetails, drnb, drnb.Repeat);
+        }
+
+        foreach (var rb in bombRewards)
+        {
+            FillRewardDetail(rewardUserDetails, rb, totalCount - totalAdded);
         }
 
         Domain.Models.RewardUser rewardUser = new Domain.Models.RewardUser()
